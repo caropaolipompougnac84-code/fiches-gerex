@@ -3,106 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fiches GEREX - Ressources pédagogiques</title>
-  <style>
-    * { box-sizing: border-box; }
-    body { font-family: system-ui, sans-serif; margin: 0; background: #f8f9fa; color: #212529; }
-    header { background: #1a365d; color: white; padding: 2rem 1rem; text-align: center; }
-    header h1 { margin: 0; font-size: 1.8rem; }
-    header p { margin: 0.5rem 0 0; opacity: 0.9; }
-    nav { background: #2c5282; padding: 0.75rem; text-align: center; }
-    nav a { color: white; margin: 0 1rem; text-decoration: none; font-weight: 500; }
-    nav a:hover { text-decoration: underline; }
-    main { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
-    .card { background: white; border-radius: 8px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
-    .card h2 { margin-top: 0; color: #1a365d; font-size: 1.2rem; }
-    .card p { color: #4a5568; font-size: 0.95rem; }
-    .tag { display: inline-block; background: #e2e8f0; color: #2d3748; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; margin-right: 0.4rem; }
-    .links { background: #edf2f7; padding: 1.5rem; border-radius: 8px; margin-top: 2rem; }
-    .links a { display: block; margin: 0.4rem 0; color: #2b6cb0; }
-    footer { text-align: center; padding: 2rem; color: #718096; font-size: 0.9rem; }
-    .env-demo { background: #e6fffa; border: 1px solid #38b2ac; padding: 1rem; border-radius: 6px; margin-top: 1.5rem; font-size: 0.9rem; }
-  </style>
+  <title>Fiches GEREX</title>
 </head>
 <body>
-  <header>
-    <h1 id="site-title">Fiches GEREX</h1>
-    <p id="site-desc">Ressources pédagogiques pour l'anglais et les lettres — Lycée pro, général, CFA</p>
-  </header>
-  <nav>
-    <a href="#fiches">Fiches</a>
-    <a href="#liens">Autres ressources</a>
-    <a href="/inscription.html">Inscription</a>
-  </nav>
-  <main>
-    <section id="fiches">
-      <h2>Fiches pédagogiques</h2>
-      <div class="grid">
-        <div class="card">
-          <span class="tag">Anglais</span><span class="tag">Seconde</span>
-          <h2>Présent simple vs présent continu</h2>
-          <p>Fiche de synthèse avec exemples, exercices et corrigés pour distinguer les deux temps.</p>
-        </div>
-        <div class="card">
-          <span class="tag">Anglais</span><span class="tag">Première</span>
-          <h2>Le Commonwealth</h2>
-          <p>Fiche civilisation : histoire, pays membres, symboles et thèmes d'actualité.</p>
-        </div>
-        <div class="card">
-          <span class="tag">Lettres</span><span class="tag">Terminale</span>
-          <h2>Rimbaud — Cahier de Douai</h2>
-          <p>Analyse des poèmes, procédés littéraires et pistes d'oral.</p>
-        </div>
-        <div class="card">
-          <span class="tag">Anglais</span><span class="tag">Bac Pro</span>
-          <h2>Made in Dagenham</h2>
-          <p>Étude du film : vocabulaire du travail, égalité, expression orale.</p>
-        </div>
-        <div class="card">
-          <span class="tag">FLE</span><span class="tag">A2-B1</span>
-          <h2>Vie quotidienne</h2>
-          <p>Fiches de vocabulaire et dialogues pour les adultes en formation.</p>
-        </div>
-        <div class="card">
-          <span class="tag">Anglais</span><span class="tag">Tous niveaux</span>
-          <h2>Prononciation</h2>
-          <p>Exercices oraux ciblés sur les sons difficiles pour les francophones.</p>
-        </div>
-      </div>
-    </section>
-    <section id="liens" class="links">
-      <h2>Autres ressources</h2>
-      <a href="https://trame-anglais-lycee.netlify.app" target="_blank">→ Trames Anglais Lycée</a>
-      <a href="https://fetes-monde-anglophone.netlify.app" target="_blank">→ Fêtes du monde anglophone</a>
-      <a href="https://hors-manuel.netlify.app" target="_blank">→ Hors manuel</a>
-      <a href="https://prononciation-anglaise.netlify.app" target="_blank">→ Prononciation anglaise</a>
-    </section>
-    <div class="env-demo" id="env-demo">
-      <!-- Rempli par le script ci-dessous -->
-    </div>
-  </main>
-  <footer>
-    Ressources Anglais & Lettres — Talence — Lycée Michel de Montaigne
-  </footer>
-
-  <script type="module">
-    // Exemple d'utilisation des variables Vite
-    // (fonctionne uniquement si le site est buildé avec Vite)
-    const siteName = import.meta.env.VITE_SITE_NAME || 'Fiches GEREX';
-    const description = import.meta.env.VITE_SITE_DESCRIPTION || 'Ressources pédagogiques';
-    const email = import.meta.env.VITE_CONTACT_EMAIL || '';
-
-    document.getElementById('site-title').textContent = siteName;
-    document.getElementById('site-desc').textContent = description;
-
-    const demo = document.getElementById('env-demo');
-    demo.innerHTML = `
-      <strong>Exemple de variables d'environnement :</strong><br>
-      Site : ${siteName}<br>
-      Description : ${description}<br>
-      Contact : ${email || '(non défini)'}
-    `;
-  </script>
+  <div id="app"></div>
+  <script type="module" src="/src/main.js"></script>
 </body>
 </html>
