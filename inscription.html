@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscription - Fiches GEREX</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 500px; margin: 2rem auto; padding: 1rem; background: #f8f9fa; }
+    h1 { color: #1a365d; }
+    form { background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    label { display: block; margin-top: 1rem; font-weight: 500; }
+    input, textarea { width: 100%; padding: 0.6rem; margin-top: 0.3rem; border: 1px solid #cbd5e0; border-radius: 4px; }
+    button { margin-top: 1.5rem; background: #2b6cb0; color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 4px; cursor: pointer; }
+    button:hover { background: #2c5282; }
+    .back { display: inline-block; margin-top: 1rem; color: #2b6cb0; }
+  </style>
+</head>
+<body>
+  <h1>Inscription</h1>
+  <p>Recevez les nouvelles ressources par e-mail.</p>
+  <form name="inscription" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+    <input type="hidden" name="form-name" value="inscription">
+    <p style="display:none"><label>Ne pas remplir : <input name="bot-field"></label></p>
+    <label>Nom <input type="text" name="nom" required></label>
+    <label>E-mail <input type="email" name="email" required></label>
+    <label>Établissement <input type="text" name="etablissement"></label>
+    <label>Message (optionnel) <textarea name="message" rows="3"></textarea></label>
+    <button type="submit">S'inscrire</button>
+  </form>
+  <a class="back" href="/">← Retour</a>
+</body>
+</html>
