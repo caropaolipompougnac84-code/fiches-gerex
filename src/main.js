@@ -55,7 +55,21 @@ document.querySelector('#app').innerHTML = `
   <button id="test-deploy" style="margin-top:1rem;padding:0.6rem 1.2rem;background:#2b6cb0;color:white;border:none;border-radius:4px;cursor:pointer;">Tester le déploiement</button>
   <p id="test-result" style="margin-top:0.5rem;font-size:0.9rem;"></p>
 </main>
-<footer>Ressources Anglais & Lettres — Talence</footer>
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-brand">
+      <strong>${siteName}</strong>
+      <p>Ressources pédagogiques pour l'anglais et les lettres</p>
+    </div>
+    <div class="footer-links">
+      <a href="/inscription.html">Inscription</a>
+      <a href="mailto:${email}">${email || 'Contact'}</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© ${new Date().getFullYear()} — Talence — Lycée Michel de Montaigne</span>
+  </div>
+</footer>
 `
 
 document.getElementById('test-deploy').addEventListener('click', () => {
