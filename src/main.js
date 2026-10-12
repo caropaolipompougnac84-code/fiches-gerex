@@ -58,8 +58,11 @@ document.querySelector('#app').innerHTML = `
 <footer class="site-footer">
   <div class="footer-content">
     <div class="footer-brand">
-      <strong>${siteName}</strong>
-      <p>Ressources pédagogiques pour l'anglais et les lettres</p>
+      <div class="footer-logo">⚙️</div>
+      <div>
+        <strong>${siteName}</strong>
+        <p>${description}</p>
+      </div>
     </div>
     <div class="footer-links">
       <a href="/inscription.html">Inscription</a>
