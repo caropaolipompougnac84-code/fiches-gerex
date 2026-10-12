@@ -22,12 +22,13 @@
     .links { background: #edf2f7; padding: 1.5rem; border-radius: 8px; margin-top: 2rem; }
     .links a { display: block; margin: 0.4rem 0; color: #2b6cb0; }
     footer { text-align: center; padding: 2rem; color: #718096; font-size: 0.9rem; }
+    .env-demo { background: #e6fffa; border: 1px solid #38b2ac; padding: 1rem; border-radius: 6px; margin-top: 1.5rem; font-size: 0.9rem; }
   </style>
 </head>
 <body>
   <header>
-    <h1>Fiches GEREX</h1>
-    <p>Ressources pédagogiques pour l'anglais et les lettres — Lycée pro, général, CFA</p>
+    <h1 id="site-title">Fiches GEREX</h1>
+    <p id="site-desc">Ressources pédagogiques pour l'anglais et les lettres — Lycée pro, général, CFA</p>
   </header>
   <nav>
     <a href="#fiches">Fiches</a>
@@ -77,9 +78,31 @@
       <a href="https://hors-manuel.netlify.app" target="_blank">→ Hors manuel</a>
       <a href="https://prononciation-anglaise.netlify.app" target="_blank">→ Prononciation anglaise</a>
     </section>
+    <div class="env-demo" id="env-demo">
+      <!-- Rempli par le script ci-dessous -->
+    </div>
   </main>
   <footer>
     Ressources Anglais & Lettres — Talence — Lycée Michel de Montaigne
   </footer>
+
+  <script type="module">
+    // Exemple d'utilisation des variables Vite
+    // (fonctionne uniquement si le site est buildé avec Vite)
+    const siteName = import.meta.env.VITE_SITE_NAME || 'Fiches GEREX';
+    const description = import.meta.env.VITE_SITE_DESCRIPTION || 'Ressources pédagogiques';
+    const email = import.meta.env.VITE_CONTACT_EMAIL || '';
+
+    document.getElementById('site-title').textContent = siteName;
+    document.getElementById('site-desc').textContent = description;
+
+    const demo = document.getElementById('env-demo');
+    demo.innerHTML = `
+      <strong>Exemple de variables d'environnement :</strong><br>
+      Site : ${siteName}<br>
+      Description : ${description}<br>
+      Contact : ${email || '(non défini)'}
+    `;
+  </script>
 </body>
 </html>
