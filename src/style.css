@@ -18,7 +18,7 @@ main { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; }
   background: #1a365d;
   color: #e2e8f0;
   margin-top: 3rem;
-  padding: 2rem 1rem 1rem;
+  padding: 2.5rem 1rem 1rem;
 }
 .footer-content {
   max-width: 1000px;
@@ -27,10 +27,25 @@ main { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; }
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.footer-brand {
+  display: flex;
+  align-items: center;
   gap: 1rem;
 }
-.footer-brand strong { font-size: 1.1rem; }
-.footer-brand p { margin: 0.3rem 0 0; font-size: 0.85rem; opacity: 0.8; }
+.footer-logo {
+  font-size: 2rem;
+  background: rgba(255,255,255,0.1);
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+.footer-brand strong { font-size: 1.15rem; }
+.footer-brand p { margin: 0.25rem 0 0; font-size: 0.85rem; opacity: 0.8; max-width: 280px; }
 .footer-links a {
   color: #90cdf4;
   text-decoration: none;
