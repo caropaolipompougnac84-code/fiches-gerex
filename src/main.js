@@ -3,6 +3,7 @@ import './style.css'
 const siteName = import.meta.env.VITE_SITE_NAME || 'Fiches GEREX'
 const description = import.meta.env.VITE_SITE_DESCRIPTION || 'Ressources pédagogiques'
 const email = import.meta.env.VITE_CONTACT_EMAIL || ''
+const facebookUrl = 'https://www.facebook.com/410547534736449/'
 
 document.querySelector('#app').innerHTML = `
 <header>
@@ -13,6 +14,7 @@ document.querySelector('#app').innerHTML = `
   <a href="#fiches">Fiches</a>
   <a href="#liens">Autres ressources</a>
   <a href="/inscription.html">Inscription</a>
+  <a href="${facebookUrl}" target="_blank">Facebook</a>
 </nav>
 <main>
   <section id="fiches">
@@ -66,6 +68,7 @@ document.querySelector('#app').innerHTML = `
     </div>
     <div class="footer-links">
       <a href="/inscription.html">Inscription</a>
+      <a href="${facebookUrl}" target="_blank">Facebook</a>
       <a href="mailto:${email}">${email || 'Contact'}</a>
     </div>
   </div>
