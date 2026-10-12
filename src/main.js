@@ -52,6 +52,14 @@ document.querySelector('#app').innerHTML = `
     Site : ${siteName}<br>
     Contact : ${email || '(non défini)'}
   </div>
+  <button id="test-deploy" style="margin-top:1rem;padding:0.6rem 1.2rem;background:#2b6cb0;color:white;border:none;border-radius:4px;cursor:pointer;">Tester le déploiement</button>
+  <p id="test-result" style="margin-top:0.5rem;font-size:0.9rem;"></p>
 </main>
 <footer>Ressources Anglais & Lettres — Talence</footer>
 `
+
+document.getElementById('test-deploy').addEventListener('click', () => {
+  const result = document.getElementById('test-result')
+  result.textContent = 'Déploiement OK — ' + new Date().toLocaleString('fr-FR')
+  result.style.color = '#276749'
+})
